@@ -9,8 +9,8 @@ import codecs
 import string
 import pickle
 
-class MyCorpus(object):
-	"""docstring for MyCorpus"""
+class BuildCorpus(object):
+	"""docstring for BuildCorpus"""
 	def __init__(self):
 		self.customwords = [i.encode('utf-8') for i in ["n't", "'ve", "'m", "'ll", "'re"]]
 		self.stoplists = stopwords.words('english') + self.customwords
@@ -58,7 +58,7 @@ class MyCorpus(object):
 		print len(corpus)
 
 def main():
-	corpus = MyCorpus()
+	corpus = BuildCorpus()
 	#corpus.buildCorpus('train', 'tmp/train-corpus.dict', 'tmp/train-corpus.mm')
 	#corpus.buildCorpus('val', 'tmp/train-corpus.dict', 'tmp/val-corpus.mm')
 
